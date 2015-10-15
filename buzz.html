@@ -1,0 +1,22 @@
+<center>
+  Weird Insane Thing:<br><br>
+  <div id="labyrinth"></div>
+</center>
+
+<script>
+var div = document.getElementById('labyrinth')
+
+function labyrinth() {
+  div.innerHTML= ''
+  for (var row = 1; row < 400; row++) {
+    for(var column = 1; column < 10; column++) {
+      var s = document.createTextNode( Math.random() < 0.5 ? ' *loL!* ' : ' *lOl!* ' )
+      div.appendChild(s)
+    }
+  div.appendChild( document.createElement('br') );
+  }
+}
+
+setInterval(labyrinth, 75)
+</script>
+
